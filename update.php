@@ -76,6 +76,10 @@
             return false;
         }
     }
+
+
+
+
     </script>
 	<link rel="stylesheet" href="css/estilo.css">
 </head>
@@ -95,15 +99,15 @@
 
 				<div>
 	<h> Fecha de Nacimiento</h>
-		<input type="date" name="fecha_nacimiento"  >
+		<input type="date" name="fecha_nacimiento" value = "<?php echo $resultado['fecha_nacimiento']; ?>" >
 </div>
 			
 			<br>				
 			<h>  sueldo </h>
 				<input type="text" name="sueldo" value="<?php if($resultado) echo $resultado['sueldo']; ?>" class="input__text" >
 			</div>
-			    <select name = "departamento">
-        <option value="0">Seleccione Departamento:</option>
+			    <select name = "departamento" value = "<?php echo $resultado['departamento']; ?>">
+
         <?php
 
           $query = $mysqli -> query ("SELECT * FROM dep");
